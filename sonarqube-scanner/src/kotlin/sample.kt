@@ -1,9 +1,18 @@
-var mysql = require('mysql');
+fun vulnerableFunction() {
+  val password = "password" // Vulnerability - hardcoded password
+  if (!password.isNull()) println("null password!")
+}
 
-var connection = mysql.createConnection({
-  host: process.env.MYSQL_URL,
-  user: process.env.MYSQL_USERNAME,
-  password: process.env.MYSQL_PASSWORD,
-  database: process.env.MYSQL_DATABASE
-});
-connection.connect();
+// Code Smell - Empty function
+fun emptyFunction() {
+}
+
+fun buggyFunction(str: String){
+  if (str == "hello"){
+    println("Hello!")
+  } else if (str == "goodbye"){
+    println("Goodbye!")
+  } else if (str == "hello"){ // Bug - Duplicate condition
+    println("Hello again!")
+  }
+}
