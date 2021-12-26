@@ -29,7 +29,7 @@ import java.util.Properties;
 
 	// print everything
 	prop.forEach((k, v) -> System.out.println("Key : " + k + ", Value : " + v));
-/*  fun vulnerableFunction() {
+  fun vulnerableFunction() {
     val password = "password" // Vulnerability - hardcoded password
     if (!password.isNull()) println("null password!")
   }
@@ -46,4 +46,4 @@ import java.util.Properties;
     } else if (str == "hello"){ // Bug - Duplicate condition
       println("Hello again!")
     }
-  }*/
+  }
